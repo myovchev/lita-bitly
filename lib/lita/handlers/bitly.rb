@@ -15,7 +15,7 @@ module Lita
       help: {"bitly|shorten URL" => "Shorten the URL using bitly"}
       )
        
-      def shorten_url()
+      def shorten_url(response)
         response.reply(response)
       end
     end
