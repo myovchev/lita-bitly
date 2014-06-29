@@ -1,11 +1,11 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-bitly"
-  spec.version       = "0.0.1"
+  spec.version       = "0.0.2"
   spec.authors       = ["Garfield Edgar Carneiro"]
   spec.email         = ["gary.carneiro@gmail.com"]
-  spec.description   = %q{TODO: Add a description}
-  spec.summary       = %q{TODO: Add a summary}
-  spec.homepage      = "TODO: Add a homepage"
+  spec.description   = %q{Shorten URL using Bit.ly}
+  spec.summary       = %q{Looks for http/https URL and shortens them}
+  spec.homepage      = "https://bitbucket.org/GaryCarneiro/lita-bitly"
   spec.license       = "MIT"
   spec.metadata      = { "lita_plugin_type" => "handler" }
 
