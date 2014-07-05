@@ -15,16 +15,16 @@ module Lita
       help: {"bitly | shorten URL" => "Shorten the URL using bitly"}
       )
       
-      
-      
+            
       def self.default_config(handler_config)
         handler_config.username = nil
         handler_config.apikey = nil
       end
       
       def shorten_url(response)
-        username = Lita.config.handler.bitly.username
-        apikey = Lita.config.handler.bitly.apikey
+        username = Lita.config.handlers.bitly.username
+        Lita.logger.debug("Got Bitly Username: #{username}")
+        apikey = Lita.config.handlers.bitly.apikey
         inputURL = response.matches[0][0]
         Lita.logger.debug("Bitly() - Input url -  #{inputURL}")
         
@@ -35,7 +35,7 @@ module Lita
         end
         
         
-        authorize = UrlShortener::Authorize.new 'pcsappops', 'R_1bcac2ff7d3d47f19d667f1b1dcefcf6'
+        authorize = UrlShortener::Authorize.new username, apikey
         Lita.logger.debug(authorize)
         client = UrlShortener::Client.new authorize
         Lita.logger.debug(client)
