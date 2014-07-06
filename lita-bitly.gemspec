@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-bitly"
-  spec.version       = "0.0.2"
+  spec.version       = "0.0.1"
   spec.authors       = ["Garfield Edgar Carneiro"]
   spec.email         = ["gary.carneiro@gmail.com"]
   spec.description   = %q{Shorten URL using Bit.ly}
@@ -21,4 +21,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", ">= 3.0.0"
   spec.add_development_dependency "simplecov"
   spec.add_development_dependency "coveralls"
+  spec.add_development_dependency "url_shortener"
 end
