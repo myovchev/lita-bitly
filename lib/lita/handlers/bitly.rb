@@ -3,7 +3,8 @@ require "url_shortener"
 module Lita
   module Handlers
     class Bitly < Handler
-      config :api_key, :username
+      config :api_key
+      config :username
 
       route(/(?:bitly|shorten)\s(.+)/i,
         :shorten_url,
